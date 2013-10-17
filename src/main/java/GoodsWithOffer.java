@@ -40,13 +40,4 @@ public class GoodsWithOffer extends Goods {
         return different;
     }
 }
-//
-//[22:34:39] Ковалевский вячеслав владимирович: у сканера будет лист товаров:
-//        List<Goods> goods
-//        и при добавлении товара надо просто пройтись по листу и спрашивать:
-//        for (Goods good: goods) {
-//        if (good.getName().equals(name)) {
-//        good.addItem();
-//break;
-//}
-//        }
+

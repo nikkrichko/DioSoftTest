@@ -20,18 +20,18 @@ public class ScanetTest {
         scaner.scan("B");
         scaner.scan("C");
         scaner.scan("D");
-//        scaner.scan("A");
-//        scaner.scan("B");
-//        scaner.scan("A");
+        scaner.scan("A");
+        scaner.scan("B");
+        scaner.scan("A");
 
-//        scaner.scan("C");
-//
-//        scaner.scan("C");
-//        scaner.scan("C");
-//        scaner.scan("C");
-//        scaner.scan("C");
-//        scaner.scan("C");
-//        scaner.scan("C");
+        scaner.scan("C");
+
+        scaner.scan("C");
+        scaner.scan("C");
+        scaner.scan("C");
+        scaner.scan("C");
+        scaner.scan("C");
+        scaner.scan("C");
 
         scaner.price();
         System.out.println("total price: " + scaner.price());
