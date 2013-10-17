@@ -1,5 +1,3 @@
-import junit.framework.*;
-import org.junit.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,7 +11,7 @@ public class ScanetTest {
 
     @Test
     public void ScanerTest_1(){
-        Scaner scaner = new Scaner();
+        PointOfSaleTerminal scaner = new PointOfSaleTerminal();
         BigDecimal expectedResult_1 = BigDecimal.valueOf(13.25);
         scaner.setPricing("a", 1.25, 3, 3.00);
         scaner.setPricing("b", 4.25);
@@ -36,7 +34,7 @@ public class ScanetTest {
 
     @Test
     public void ScanerTest_2(){
-        Scaner scaner = new Scaner();
+        PointOfSaleTerminal scaner = new PointOfSaleTerminal();
         BigDecimal expectedResult_2 = BigDecimal.valueOf(6.00);
         scaner.setPricing("a", 1.25, 3, 3.00);
         scaner.setPricing("b", 4.25);
@@ -57,7 +55,7 @@ public class ScanetTest {
 
     @Test
     public void ScanerTest_3(){
-        Scaner scaner = new Scaner();
+        PointOfSaleTerminal scaner = new PointOfSaleTerminal();
         BigDecimal expectedResult_3 = BigDecimal.valueOf(7.25);
         scaner.setPricing("a", 1.25, 3, 3.00);
         scaner.setPricing("b", 4.25);
@@ -74,7 +72,7 @@ public class ScanetTest {
 //
 //    @Test
 //    public void ScanerTestExeption(){
-//        Scaner scaner = new Scaner();
+//        PointOfSaleTerminal scaner = new PointOfSaleTerminal();
 //        BigDecimal expectedResult_3 = BigDecimal.valueOf(7.25);
 //        scaner.setPricing("a", 1.25, 3, 3.00);
 //        scaner.setPricing("b", 4.25);
