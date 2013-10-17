@@ -22,23 +22,22 @@ public class Scaner {
         goodsDB.add(goods);
     }
 
-//    public void scan(String name) {
-//        for (Goods good: goodsDB) {
-//            if (good.getName().equals(name)) {
-//                good.addItem();
-//
-//                break;
-//            }
-//        }
-//    }
 
     public void scan (String name){
+        try{
         for (Goods good: goodsDB){
             if (good.getName().equals(name)){
                 priceDB.add(good);
                 break;
+            }  else
+            {
+                throw new NoSuchFieldException();
             }
 
+        }
+        } catch (NoSuchFieldException e){
+            System.out.println("item:" + name);
+            System.out.println("there is no such goods in DB");
         }
 
     }
@@ -47,29 +46,24 @@ public class Scaner {
         BigDecimal total = new BigDecimal(0);
         totalPrice = 0;
         for (Goods goods: priceDB){
-            if(goods.getOfferCount()!=0){
-                goods.setCounter(1);
-                if(goods.getCounter() == goods.getOfferCount()){
-                    goods.setCounter(0);
-                    totalPrice += goods.getDifferent();
-                }
-            }
+            countCheck(goods);
+
+
             totalPrice += goods.price ;
-//            System.out.println("current price : " + totalPrice);
-
         }
-//        System.out.println("------");
-//        for (Goods good : priceDB){
-//// for (Goods good: goodsDB) {
-//            total = total.add(good.getTotalPrice());
-//
-//
-//        }
-
         priceDB.clear();
         return total = BigDecimal.valueOf(totalPrice);
 
-        // clear goodsDB
+
     }
 
+    private void countCheck(Goods goods){
+        if(goods.getOfferCount()!=0){
+            goods.setCounter(1);
+            if(goods.getCounter() == goods.getOfferCount()){
+                goods.setCounter(0);
+                totalPrice += goods.getDifferent();
+            }
+        }
+    }
 }
