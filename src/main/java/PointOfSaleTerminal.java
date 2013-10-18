@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PointOfSaleTerminal {
 
-    private List<Goods> goodsDB = new ArrayList<Goods>();
+    public List<Goods> goodsDB = new ArrayList<Goods>();
     public List<Goods> priceDB = new ArrayList<Goods>();
     double totalPrice;
 

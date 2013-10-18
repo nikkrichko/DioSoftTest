@@ -3,11 +3,12 @@ import java.math.BigDecimal;
 public class Goods {
 
 
-        private final String name;
+    private final String name;
 
-        protected final double price;
 
-        protected double totalPrice = 0.0;
+
+    protected final double price;
+
         protected int counter = 0;
         private int offerCount = 0;
         private double offerPrice = 0.0;
@@ -26,18 +27,15 @@ public class Goods {
         this.price = price;
         }
 
-
-
-    public void addItem() {
-        totalPrice += price;
-    }
-
-    public BigDecimal getTotalPrice() {
-        return BigDecimal.valueOf(totalPrice);
-    }
-
     public String getName() {
         return name;
+    }
+    public double getPrice() {
+        return price;
+    }
+
+    public double getOfferPrice() {
+        return offerPrice;
     }
 
     public void setCounter(int counter){
